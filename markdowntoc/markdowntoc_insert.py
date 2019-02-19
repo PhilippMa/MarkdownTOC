@@ -24,7 +24,7 @@ PT_IMAGE = re.compile(r'!\[([^\]]+)\]\([^\)]+\)')
 # [Heading]{#my-id}
 PT_EX_ID = re.compile(r'\{#.+?\}$')
 PT_TAG = re.compile(r'<.*?>')
-PT_ANCHOR = re.compile(r'<a\s+id="[^"]+"\s*>\s*</a>')
+PT_ANCHOR = re.compile(r'<a\s+name="[^"]+"\s*>\s*</a>')
 
 class MarkdowntocInsert(sublime_plugin.TextCommand, Base):
 
