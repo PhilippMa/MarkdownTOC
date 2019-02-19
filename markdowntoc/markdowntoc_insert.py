@@ -350,10 +350,10 @@ class MarkdowntocInsert(sublime_plugin.TextCommand, Base):
                 # so use raw heading valie(replaced whitespaces) then
                 _id = item[3] or re.sub(r'\s+', '-', item[1])
                 if is_update:
-                    new_anchor = '<a id="{0}"></a>'.format(_id)
+                    new_anchor = '<a name="{0}"></a>'.format(_id)
                     v.replace(edit, anchor_region, new_anchor)
                 else:
-                    new_anchor = '\n<a id="{0}"></a>'.format(_id)
+                    new_anchor = '\n<a name="{0}"></a>'.format(_id)
                     v.insert(edit, anchor_region.end(), new_anchor)
 
             else:
